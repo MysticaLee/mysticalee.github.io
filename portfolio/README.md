@@ -1,4 +1,21 @@
-# React + TypeScript + Vite
+# Overview
+
+## Setup
+
+To get the most recent changes and dependencies:
+
+```bash
+git fetch
+npm install # Ensure you are at the root directory of portfolio
+```
+
+To run the development server locally:
+
+```bash
+npm run dev
+```
+
+## HMR and ESLint Rules
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
