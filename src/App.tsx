@@ -1,4 +1,4 @@
-// import "./App.css";
+import './App.css';
 
 import About from './components/About';
 import Contact from './components/Contact';
@@ -13,19 +13,21 @@ import Projects from './components/Projects';
 
 function App() {
   return (
-    <div className="bg-custom-black h-screen">
+    <>
       <NavBar />
-      <Home />
-      <div id="about">
-        <About />
+      <div className="mt-16 bg-custom-black text-custom-white">
+        <Home />
+        <div id="about" className="scroll-m-16">
+          <About />
+        </div>
+        <div id="projects" className="min-h-[calc(100vh-64px)] scroll-m-16">
+          <Projects />
+        </div>
+        <div id="contact" className="scroll-m-16">
+          <Contact />
+        </div>
       </div>
-      <div id="projects">
-        <Projects />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
-    </div>
+    </>
   );
 }
 

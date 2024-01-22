@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div className="text-custom-white mt-16">Home</div>;
+  return <div className="min-h-[calc(100vh-64px)]">Home</div>;
 }
