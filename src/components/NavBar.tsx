@@ -24,12 +24,15 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="shadow-custom-white fixed left-0 top-0 w-full shadow-sm">
-      <div className="bg-custom-black items-center justify-between px-4 py-4 md:flex">
-        <div className="text-custom-white mx-4 flex cursor-pointer items-center font-[Poppins] text-2xl font-bold">
+    <div className="fixed left-0 top-0 w-full shadow-sm shadow-custom-white">
+      <div className="items-center justify-between bg-custom-black px-4 py-4 md:flex">
+        <a
+          href="#"
+          className="mx-4 flex cursor-pointer items-center font-[Poppins] text-2xl font-bold text-custom-white"
+        >
           <IconNorthStar />
           <span className="mx-2">JL</span>
-        </div>
+        </a>
         <div
           className="absolute right-6 top-4 cursor-pointer md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -42,18 +45,24 @@ export default function NavBar() {
         </div>
         <div className="flex md:justify-center">
           <ul
-            className={`bg-custom-black absolute left-0 z-[-1] w-full transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:border-0 md:pl-0 md:shadow-none ${
+            className={`absolute left-0 z-[-1] w-full bg-custom-black transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:border-0 md:pl-0 md:shadow-none ${
               menuOpen
-                ? "border-custom-white shadow-custom-white top-16 border-t-2 shadow-sm"
+                ? "top-16 border-t-2 border-custom-white shadow-sm shadow-custom-white"
                 : "top-[-490px]"
             }`}
           >
             {links.map((link) => (
               <li
                 key={link.name}
-                className="hover:text-custom-secondary border-custom-secondary text-custom-white mx-4 my-5 cursor-pointer text-center text-xl md:my-0 md:px-3 md:hover:border-b-2"
+                className="mx-4 my-5 cursor-pointer border-custom-secondary text-center text-xl text-custom-white hover:text-custom-secondary md:my-0 md:px-3 md:hover:border-b-2"
               >
-                <a href={link.href}>{link.name}</a>
+                <a
+                  className="sm:px-32 md:px-0"
+                  href={link.href}
+                  onClick={() => setMenuOpen(!menuOpen)}
+                >
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>
