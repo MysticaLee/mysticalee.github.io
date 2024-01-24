@@ -5,4 +5,5 @@ export type Project = {
   tech: string[];
   repository: string;
   url: string;
+  src: string;
 };

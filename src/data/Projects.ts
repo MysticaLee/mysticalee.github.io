@@ -3,31 +3,48 @@ export default function getProjects() {
     {
       id: 1,
       name: "Sound Display & Entertainment (SDE) System",
-      description: "This is project 1",
-      tech: ["Verilog"],
+      description:
+        "A hammer game implemented on the FPGA board with the use of a MEMs Microphone and a OLED RGB Display Screen.",
+      tech: ["Verilog", "FPGA"],
       repository: "https://github.com/MysticaLee/SoundDisplay",
       url: "",
+      src: "FPGA.gif",
     },
     {
       id: 2,
       name: "COvid Patients Enhanced Monitoring (COPEMON)",
-      description: "This is project 1",
-      tech: ["C"],
+      description:
+        "The system sends data periodically to a server known as CHIP Associated Cloud Unit (CHIPACU), which simulates an Internet of Things (IoT) server, whenever certain conditions are met. This allows us to better monitor the patients, and to show warning signs whenever something abnormal is detected in the patient.",
+      tech: ["C", "STM32"],
       repository: "https://github.com/MysticaLee/COPEMON",
       url: "",
+      src: "STM32.gif",
     },
     {
       id: 3,
       name: "Recommender Microservice",
-      description: "This is project 1",
-      tech: ["Python", "FastAPI"],
+      description:
+        "A backend microservice, built on a core of Bayesian Knowledge Tracing (BKT), wrapped within a REST API, to provide endpoints for the main website to retrieve and process the data. pyBKT is a Python implementation of BKT, a machine learning algorithm that models and predicts the probability of the students' mastery of a skill. ",
+      tech: [
+        "Machine Learning (pyBKT)",
+        "Python",
+        "FastAPI",
+        "Heroku",
+        "Firebase Storage",
+        "Redis",
+        "JWT",
+        "OAuth2.0",
+        "PostgreSQL",
+      ],
       repository: "https://github.com/MysticaLee/recommender-deployment",
       url: "",
+      src: "Recommender-Microservice.png",
     },
     {
       id: 4,
       name: "LeetNode",
-      description: "This is project 1",
+      description:
+        "An adaptive learning and educational platform, targeted towards electrical circuit principles at the undergraduate level. Students gradually achieve mastery in these principles through practicing dynamically generated questions, recommended and adjusted in accordance with their learning needs and performance levels.",
       tech: [
         "Next.js",
         "TypeScript",
@@ -46,13 +63,14 @@ export default function getProjects() {
         "Redis",
         "FastAPI",
         "Firebase Storage",
-        "pyBKT",
+        "Machine Learning (pyBKT)",
         "Figma",
         "GitHub Actions",
         "Notion",
       ],
       repository: "https://github.com/zhermin/LeetNode",
       url: "https://leetnode.vercel.app/",
+      src: "LeetNode.png",
     },
   ].reverse();
 }

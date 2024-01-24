@@ -8,37 +8,45 @@ export default function Card({ project }: CardProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mx-8 max-w-sm overflow-hidden rounded-lg shadow-md shadow-white md:max-w-md lg:max-w-lg">
+    <div className="mx-8 mb-8 mt-4 overflow-hidden rounded-xl shadow-md shadow-custom-white md:mx-16 lg:mx-32 xl:mx-72">
+      <img className="w-full" src={project.src} />
       <div className="px-6 py-4">
-        <text className="mb-2 text-xl font-bold">{project.name}</text>
+        <h1 className="mb-2 text-2xl font-bold">{project.name}</h1>
         <p className="text-base text-custom-primary">{project.description}</p>
       </div>
-      <div className="flex items-center justify-center px-6 pb-1 pt-4">
-        {project.tech.slice(0, 3).map((t) => (
-          <span className="mb-2 mr-2 inline-block rounded-full bg-custom-tertiary px-3 py-1 text-sm font-semibold text-custom-white">
-            {t}
-          </span>
-        ))}
-        {project.tech.length > 3 && (
-          <span
-            className="mb-2 inline-block cursor-pointer rounded-full bg-custom-tertiary text-sm font-semibold text-custom-white hover:bg-custom-secondary"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <IconChevronUp /> : <IconChevronDown />}
-          </span>
-        )}
-      </div>
-      <div>
-        {open &&
-          project.tech
-            .slice(3, project.tech.length)
-            .map((t) => (
-              <span className="mb-2 mr-2 inline-block rounded-full bg-custom-tertiary px-3 py-1 text-sm font-semibold text-custom-white">
+      <div className="px-6 pb-1 pt-4">
+        <div className="flex flex-wrap items-center justify-center space-x-2">
+          {project.tech.slice(0, 3).map((t) => (
+            <span
+              key={t}
+              className="mb-2 inline-block rounded-full bg-custom-tertiary px-3 py-1 text-sm font-semibold text-custom-white"
+            >
+              {t}
+            </span>
+          ))}
+          {project.tech.length > 3 && (
+            <span
+              className="mb-2 inline-block cursor-pointer rounded-full bg-custom-tertiary text-sm font-semibold text-custom-white hover:bg-custom-secondary"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? <IconChevronUp /> : <IconChevronDown />}
+            </span>
+          )}
+        </div>
+        <div className="flex flex-wrap items-center justify-center space-x-2">
+          {open &&
+            project.tech.slice(3, project.tech.length).map((t) => (
+              <span
+                key={t}
+                className="mb-2 inline-block rounded-full bg-custom-tertiary px-3 py-1 text-sm font-semibold text-custom-white"
+              >
                 {t}
               </span>
             ))}
+        </div>
       </div>
-      <div className="flex justify-center space-x-2 px-6 pb-4 pt-1">
+
+      <div className="flex justify-center space-x-4 px-6 pb-4 pt-1">
         <button className="rounded-lg border border-custom-secondary px-4 py-2 font-bold text-white hover:bg-custom-secondary">
           <a href={project.repository} target="_blank">
             GitHub

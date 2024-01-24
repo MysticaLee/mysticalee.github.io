@@ -56,7 +56,13 @@ export default function NavBar() {
                 key={link.name}
                 className="mx-4 my-5 cursor-pointer border-custom-secondary text-center text-xl text-custom-white hover:text-custom-secondary md:my-0 md:px-3 md:hover:border-b-2"
               >
-                <a href={link.href}>{link.name}</a>
+                <a
+                  className="sm:px-32 md:px-0"
+                  href={link.href}
+                  onClick={() => setMenuOpen(!menuOpen)}
+                >
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>
