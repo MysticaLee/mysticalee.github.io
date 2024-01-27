@@ -24,7 +24,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="fixed left-0 top-0 w-full shadow-sm shadow-custom-white">
+    <div className="fixed left-0 top-0 z-10 w-full shadow-sm shadow-custom-white">
       <div className="items-center justify-between bg-custom-black px-4 py-4 md:flex">
         <a
           href="#"

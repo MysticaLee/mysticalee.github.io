@@ -8,12 +8,14 @@ export default function Card({ project }: CardProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mx-8 mb-8 mt-4 overflow-hidden rounded-xl shadow-md shadow-custom-white md:mx-16 lg:mx-32 xl:mx-72">
-      <img className="w-full" src={project.src} />
+    <div className="overflow-hidden rounded-xl shadow-md shadow-custom-white">
+      <img className="h-56 w-full" src={project.src} />
+
       <div className="px-6 py-4">
         <h1 className="mb-2 text-2xl font-bold">{project.name}</h1>
         <p className="text-base text-custom-primary">{project.description}</p>
       </div>
+
       <div className="px-6 pb-1 pt-4">
         <div className="flex flex-wrap items-center justify-center space-x-2">
           {project.tech.slice(0, 3).map((t) => (
@@ -25,12 +27,26 @@ export default function Card({ project }: CardProps) {
             </span>
           ))}
           {project.tech.length > 3 && (
-            <span
-              className="mb-2 inline-block cursor-pointer rounded-full bg-custom-tertiary text-sm font-semibold text-custom-white hover:bg-custom-secondary"
+            <div
+              className="has-tooltip mb-2 inline-block cursor-pointer rounded-full bg-custom-tertiary text-sm font-semibold text-custom-white hover:bg-custom-secondary"
               onClick={() => setOpen(!open)}
             >
-              {open ? <IconChevronUp /> : <IconChevronDown />}
-            </span>
+              {open ? (
+                <>
+                  <IconChevronUp />
+                  <span className="tooltip -right-[120%] -top-9 px-3 py-1">
+                    Minimize
+                  </span>
+                </>
+              ) : (
+                <>
+                  <IconChevronDown />
+                  <span className="tooltip -right-[100%] -top-9 px-3 py-1">
+                    Expand
+                  </span>
+                </>
+              )}
+            </div>
           )}
         </div>
         <div className="flex flex-wrap items-center justify-center space-x-2">
