@@ -1,3 +1,9 @@
+import FPGA from '../assets/projects/FPGA.gif';
+import LeetNode from '../assets/projects/LeetNode.png';
+import Portfolio from '../assets/projects/Portfolio.png';
+import RecommenderMicroservice from '../assets/projects/Recommender-Microservice.png';
+import STM32 from '../assets/projects/STM32.gif';
+
 export default function getProjects() {
   return [
     {
@@ -8,7 +14,7 @@ export default function getProjects() {
       tech: ["Verilog", "FPGA"],
       repository: "https://github.com/MysticaLee/SoundDisplay",
       url: "",
-      src: "FPGA.gif",
+      src: FPGA,
     },
     {
       id: 2,
@@ -18,19 +24,19 @@ export default function getProjects() {
       tech: ["C", "STM32"],
       repository: "https://github.com/MysticaLee/COPEMON",
       url: "",
-      src: "STM32.gif",
+      src: STM32,
     },
     {
       id: 3,
       name: "Recommender Microservice",
       description:
-        "A backend microservice, built on a core of Bayesian Knowledge Tracing (BKT), wrapped within a REST API, to provide endpoints for the main website to retrieve and process the data. pyBKT is a Python implementation of BKT, a machine learning algorithm that models and predicts the probability of the students' mastery of a skill. ",
+        "A backend microservice, built on a core of Bayesian Knowledge Tracing (BKT), wrapped within a REST API, to provide endpoints for the main website to retrieve and process the data. pyBKT is a Python implementation of BKT, a machine learning algorithm that models and predicts the probability of the students' mastery of a skill.",
       tech: [
         "Machine Learning (pyBKT)",
         "Python",
         "FastAPI",
         "Heroku",
-        "Firebase Storage",
+        "Firebase",
         "Redis",
         "JWT",
         "OAuth2.0",
@@ -38,7 +44,7 @@ export default function getProjects() {
       ],
       repository: "https://github.com/MysticaLee/recommender-deployment",
       url: "",
-      src: "Recommender-Microservice.png",
+      src: RecommenderMicroservice,
     },
     {
       id: 4,
@@ -49,10 +55,10 @@ export default function getProjects() {
         "Next.js",
         "TypeScript",
         "React",
-        "TailwindCSS",
-        "Mantine UI",
+        "Tailwind CSS",
+        "Mantine",
         "NextAuth",
-        "Prisma ORM",
+        "Prisma",
         "MySQL",
         "React Query",
         "Zod",
@@ -62,7 +68,7 @@ export default function getProjects() {
         "Heroku",
         "Redis",
         "FastAPI",
-        "Firebase Storage",
+        "Firebase",
         "Machine Learning (pyBKT)",
         "Figma",
         "GitHub Actions",
@@ -70,7 +76,17 @@ export default function getProjects() {
       ],
       repository: "https://github.com/zhermin/LeetNode",
       url: "https://leetnode.vercel.app/",
-      src: "LeetNode.png",
+      src: LeetNode,
+    },
+    {
+      id: 5,
+      name: "Portfolio",
+      description:
+        "A portfolio website to showcase my projects and experiences.",
+      tech: ["TypeScript", "React", "Tailwind CSS", "Vite"],
+      repository: "https://github.com/MysticaLee/mysticalee.github.io",
+      url: "",
+      src: Portfolio,
     },
   ].reverse();
 }

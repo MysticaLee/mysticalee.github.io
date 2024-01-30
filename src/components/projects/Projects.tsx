@@ -1,5 +1,5 @@
-import getProjects from '../data/Projects';
-import Card from './projects/Card';
+import getProjects from '../../data/Projects';
+import Card from './Card';
 
 export default function Projects() {
   const projects = getProjects();

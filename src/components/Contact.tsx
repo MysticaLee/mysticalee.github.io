@@ -1,18 +1,25 @@
 import { useState } from 'react';
 
-import {
-    IconBrandGithub, IconBrandLinkedin, IconCopy, IconCopyCheck, IconMailFilled
-} from '@tabler/icons-react';
+import { IconCopy, IconCopyCheck, IconMailFilled } from '@tabler/icons-react';
+
+import getContacts, { getEmail } from '../data/Contact';
 
 export default function Contact() {
   const [copied, setCopied] = useState<boolean>(false);
   const [timeoutId, setTimeoutId] = useState<number | null>(null);
 
-  const EMAIL = "jasminelxy94@gmail.com";
+  const EMAIL = getEmail();
+  const contacts = getContacts();
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(EMAIL);
-    setCopied(!copied);
+    navigator.clipboard
+      .writeText(EMAIL)
+      .then(() => {
+        setCopied(true);
+      })
+      .catch(() => {
+        setCopied(false);
+      });
 
     if (timeoutId) clearTimeout(timeoutId);
 
@@ -22,19 +29,6 @@ export default function Contact() {
 
     setTimeoutId(newTimeoutId);
   };
-
-  const contacts = [
-    {
-      id: "GitHub",
-      url: "https://github.com/MysticaLee",
-      icon: <IconBrandGithub size={32} />,
-    },
-    {
-      id: "LinkedIn",
-      url: "https://www.linkedin.com/in/lxyj/",
-      icon: <IconBrandLinkedin size={32} />,
-    },
-  ];
 
   return (
     <section id="contact" className="min-h-[calc(100vh-64px)] scroll-m-16">
@@ -46,13 +40,13 @@ export default function Contact() {
       </div>
 
       <div className="my-4 space-y-10">
-        <div className="relative flex items-center justify-center space-x-2 overflow-hidden rounded-xl py-8 shadow-t-md shadow-custom-white">
+        <div className="relative flex flex-wrap items-center justify-center space-x-2 overflow-hidden rounded-xl py-8 shadow-t-md shadow-custom-white">
           <IconMailFilled />
           <button
-            className="flex text-xl font-bold hover:text-custom-secondary"
+            className="flex flex-wrap items-center justify-center overflow-hidden text-xl font-bold hover:text-custom-secondary"
             onClick={handleCopy}
           >
-            <span className="mr-2">{EMAIL}</span>
+            <span className="mr-2 truncate">{EMAIL}</span>
             {copied ? <IconCopyCheck color="green" /> : <IconCopy />}
           </button>
         </div>
@@ -64,6 +58,7 @@ export default function Contact() {
                 <a
                   href={contact.url}
                   target="_blank"
+                  rel="noreferrer"
                   className="hover:text-custom-secondary"
                 >
                   {contact.icon}

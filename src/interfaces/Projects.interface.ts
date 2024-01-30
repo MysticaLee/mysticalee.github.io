@@ -1,4 +1,4 @@
-export type Project = {
+export default interface Project {
   id: number;
   name: string;
   description: string;
@@ -6,4 +6,4 @@ export type Project = {
   repository: string;
   url: string;
   src: string;
-};
+}
