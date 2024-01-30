@@ -11,9 +11,9 @@ import Projects from './components/projects/Projects';
 
 function App() {
   return (
-    <div className="relative">
+    <div className="flex flex-col bg-custom-black text-custom-white">
       <NavBar />
-      <div className="bg-custom-black px-8 pt-16 text-custom-white md:px-16 lg:px-32 xl:px-48">
+      <div className="flex-grow px-8 pt-16 md:px-16 lg:px-32 xl:px-48">
         <Home />
         <About />
         <Education />
