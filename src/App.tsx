@@ -1,35 +1,28 @@
 import './App.css';
 
-import About from './components/About';
+import About from './components/about/About';
 import Contact from './components/Contact';
+import Education from './components/Education';
+import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
-import Projects from './components/Projects';
-
-// import viteLogo from "/vite.svg";
-// import { useState } from "react";
-
-// import reactLogo from "./assets/react.svg";
+import Projects from './components/projects/Projects';
 
 function App() {
   return (
-    <>
+    <div className="relative">
       <NavBar />
-      <div className="mt-16 bg-custom-black text-custom-white">
+      <div className="bg-custom-black px-8 pt-16 text-custom-white md:px-16 lg:px-32 xl:px-48">
         <Home />
-        <div id="about" className="scroll-m-16">
-          <About />
-        </div>
-        <div id="projects" className="min-h-[calc(100vh-64px)] scroll-m-16">
-          <Projects />
-        </div>
-        <div id="contact" className="scroll-m-16">
-          <Contact />
-        </div>
-        <Footer />
+        <About />
+        <Education />
+        <Experience />
+        <Projects />
+        <Contact />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 

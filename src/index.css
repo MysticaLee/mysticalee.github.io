@@ -5,3 +5,14 @@
 html {
   scroll-behavior: smooth;
 }
+
+.tooltip {
+  @apply invisible absolute rounded-lg bg-custom-secondary text-sm font-medium text-custom-white shadow-sm;
+}
+
+.has-tooltip {
+  @apply relative;
+}
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
