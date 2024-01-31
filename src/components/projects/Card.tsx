@@ -8,15 +8,17 @@ export default function Card({ project }: CardProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-xl shadow-md shadow-custom-white">
+    <div className="rounded-xl shadow-md shadow-custom-black dark:shadow-custom-white">
       <img
-        className="h-56 w-full border-b-2 border-custom-primary"
+        className="h-56 w-full rounded-t-xl border-b-2 border-custom-secondary dark:border-custom-primary"
         src={project.src}
       />
 
       <div className="px-6 py-4">
-        <h1 className="mb-2 text-2xl font-bold">{project.name}</h1>
-        <p className="text-base text-custom-primary">{project.description}</p>
+        <h1 className="mb-2 text-lg font-bold md:text-2xl">{project.name}</h1>
+        <p className="text-sm text-custom-secondary dark:text-custom-primary md:text-base">
+          {project.description}
+        </p>
       </div>
 
       <div className="px-6 pb-1 pt-4">
@@ -30,28 +32,15 @@ export default function Card({ project }: CardProps) {
             </span>
           ))}
           {project.tech.length > 3 && (
-            <div
-              className="has-tooltip mb-2 inline-block cursor-pointer rounded-full bg-custom-tertiary text-sm font-semibold text-custom-white hover:bg-custom-secondary"
+            <button
+              className="has-tooltip mb-2 inline-block rounded-full bg-custom-tertiary text-sm font-semibold text-custom-white hover:bg-custom-secondary"
               onClick={() => {
                 setOpen(!open);
               }}
             >
-              {open ? (
-                <>
-                  <IconChevronUp />
-                  <span className="tooltip -right-[120%] -top-9 px-3 py-1">
-                    Minimize
-                  </span>
-                </>
-              ) : (
-                <>
-                  <IconChevronDown />
-                  <span className="tooltip -right-[100%] -top-9 px-3 py-1">
-                    Expand
-                  </span>
-                </>
-              )}
-            </div>
+              {open ? <IconChevronUp /> : <IconChevronDown />}
+              <span className="tooltip">{open ? "Minimize" : "Expand"}</span>
+            </button>
           )}
         </div>
         <div className="flex flex-wrap items-center justify-center space-x-2">
@@ -68,13 +57,13 @@ export default function Card({ project }: CardProps) {
       </div>
 
       <div className="flex justify-center space-x-4 px-6 pb-4 pt-1">
-        <button className="rounded-lg border border-custom-secondary px-4 py-2 font-bold text-white hover:bg-custom-secondary">
+        <button className="rounded-lg border border-custom-secondary px-4 py-2 font-bold hover:bg-custom-hover dark:border-custom-hover">
           <a href={project.repository} target="_blank" rel="noreferrer">
             GitHub
           </a>
         </button>
         {project?.url && (
-          <button className="rounded-lg bg-custom-primary px-4 py-2 font-bold text-custom-black hover:bg-custom-secondary">
+          <button className="rounded-lg bg-custom-secondary px-4 py-2 font-bold text-custom-white hover:bg-custom-hover dark:bg-custom-primary dark:text-custom-black dark:hover:bg-custom-hover">
             <a href={project.url} target="_blank" rel="noreferrer">
               Demo
             </a>

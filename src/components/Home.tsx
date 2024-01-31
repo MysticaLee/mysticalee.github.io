@@ -18,11 +18,11 @@ export default function Home() {
           wrapper="span"
           cursor={true}
           repeat={Infinity}
-          style={{ fontSize: "2rem", display: "inline-block" }}
+          style={{ fontSize: "1.75rem", display: "inline-block" }}
         />
         <a
           href="#projects"
-          className="rounded-lg bg-custom-primary px-4 py-2 font-bold text-custom-black hover:bg-custom-secondary"
+          className="hover:bg-custom-hover rounded-lg bg-custom-secondary px-4 py-2 font-bold text-custom-white dark:bg-custom-primary dark:text-custom-black"
         >
           My Projects
         </a>

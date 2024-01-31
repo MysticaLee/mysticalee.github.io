@@ -7,7 +7,7 @@ html {
 }
 
 .tooltip {
-  @apply invisible absolute rounded-lg bg-custom-secondary text-sm font-medium text-custom-white shadow-sm;
+  @apply bg-custom-hover invisible absolute left-1/2 top-[120%] -translate-x-1/2 transform whitespace-nowrap rounded-lg px-3 py-2 font-sans text-sm font-medium shadow-sm;
 }
 
 .has-tooltip {

@@ -11,7 +11,7 @@ export default function Skills() {
           key={item.type}
           className="flex flex-col items-center justify-center space-y-2"
         >
-          <h2 className="border-b-2 border-custom-primary text-xl font-bold">
+          <h2 className="border-b-2 border-custom-secondary text-xl font-bold dark:border-custom-primary">
             {item.type}
           </h2>
           <ul className="flex list-none flex-wrap items-center justify-center space-x-6">

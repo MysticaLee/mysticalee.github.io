@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -8,8 +9,9 @@ export default {
           white: "#F1F1F1",
           black: "#011627",
           primary: "#B2DDF7",
-          secondary: "#6D98BA",
+          secondary: "#18579F",
           tertiary: "#386641",
+          hover: "#6D98BA",
         },
       },
       boxShadow: {
