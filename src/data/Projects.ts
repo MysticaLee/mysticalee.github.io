@@ -1,8 +1,8 @@
-import FPGA from '../assets/projects/FPGA.gif';
+import FPGA from '../assets/projects/FPGA.jpg';
 import LeetNode from '../assets/projects/LeetNode.png';
 import Portfolio from '../assets/projects/Portfolio.png';
 import RecommenderMicroservice from '../assets/projects/Recommender-Microservice.png';
-import STM32 from '../assets/projects/STM32.gif';
+import STM32 from '../assets/projects/STM32.jpg';
 
 export default function getProjects() {
   return [
