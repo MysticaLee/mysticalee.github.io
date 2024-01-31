@@ -11,7 +11,7 @@ import Projects from './components/projects/Projects';
 
 function App() {
   return (
-    <div className="flex flex-col bg-custom-white text-custom-black dark:bg-custom-black dark:text-custom-white">
+    <div className="flex flex-col">
       <NavBar />
       <div className="flex-grow px-8 pt-16 md:px-16 lg:px-32 xl:px-48">
         <Home />

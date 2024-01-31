@@ -33,3 +33,10 @@ Run before pushing to main:
 ```bash
 npx eslint .
 ```
+
+To check preview before deployment:
+
+```bash
+npm run build
+npm run preview
+```

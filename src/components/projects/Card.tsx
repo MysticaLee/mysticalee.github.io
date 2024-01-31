@@ -10,7 +10,7 @@ export default function Card({ project }: CardProps) {
   return (
     <div className="rounded-xl shadow-md shadow-custom-black dark:shadow-custom-white">
       <img
-        className="h-56 w-full rounded-t-xl border-b-2 border-custom-secondary dark:border-custom-primary"
+        className="h-56 w-full rounded-t-xl shadow-sm shadow-custom-black dark:shadow-custom-white"
         src={project.src}
       />
 

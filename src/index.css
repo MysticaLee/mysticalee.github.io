@@ -6,8 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  @apply bg-custom-white text-custom-black dark:bg-custom-black dark:text-custom-white;
+}
+
 .tooltip {
-  @apply bg-custom-hover invisible absolute left-1/2 top-[120%] -translate-x-1/2 transform whitespace-nowrap rounded-lg px-3 py-2 font-sans text-sm font-medium shadow-sm;
+  @apply invisible absolute left-1/2 top-[120%] -translate-x-1/2 transform whitespace-nowrap rounded-lg bg-custom-hover px-3 py-2 font-sans text-sm font-medium shadow-sm;
 }
 
 .has-tooltip {
