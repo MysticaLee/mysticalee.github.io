@@ -7,10 +7,10 @@ This repository houses the code for my personal portfolio. This portfolio only c
 This portfolio is built using the following technologies:
 
 <div>
-  <img alt="ViteJS Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" height=50 />
-  <img alt="ReactJS Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" height=50 />
-  <img alt="TypeScript Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" height=50 />
-  <img alt="TailwindCSS Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" height=50 />
+  <img alt="ViteJS Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" width=50 />
+  <img alt="ReactJS Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width=50 />
+  <img alt="TypeScript Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width=50 />
+  <img alt="TailwindCSS Icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" width=50 />
 </div>
 
 - Vite - Next Generation Frontend Tooling
